@@ -18,7 +18,7 @@ class Bottles
   end
 
   def verses(from, to)
-    from.downto(to) {|n| print n}
+    from.downto(to).collect { |v| verse(v) }.join("\n")
   end
 
   def bottles(num_of_bottles)
@@ -40,5 +40,5 @@ end
 # c = Bottles.new.verse(89)
 # puts c
 
-d = Bottles.new.verses(10, 1)
+d = Bottles.new.verses(5, 0)
 puts d
