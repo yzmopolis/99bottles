@@ -1,7 +1,7 @@
 class Bottles
 
   def song
-    puts 'song'
+    verses(99, 0)
   end
 
   def verse(number_of_bottles)
@@ -32,13 +32,3 @@ class Bottles
   end
 
 end
-
-# a = Bottles.new.verse(0)
-# puts a
-# b = Bottles.new.verse(1)
-# puts b
-# c = Bottles.new.verse(89)
-# puts c
-
-d = Bottles.new.verses(5, 0)
-puts d
