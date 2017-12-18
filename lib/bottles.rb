@@ -4,8 +4,16 @@ class Bottles
     puts 'song'
   end
 
-  def verse(v)
-    puts 'verse'
+  def verse(number_of_bottles)
+    result = ''
+    if number_of_bottles == 0
+      result += "#{bottles(number_of_bottles).capitalize} of beer on the wall, #{bottles(number_of_bottles)} of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall."
+    else
+      result += "#{bottles(number_of_bottles)} of beer on the wall, #{bottles(number_of_bottles)} of beer.\n"
+      number_of_bottles -= 1
+      result += "Take #{number_of_bottles < 1 ? 'it' : 'one';} down and pass it around, #{bottles(number_of_bottles)} of beer on the wall.\n"
+    end
+    result
   end
 
   def verses(v, w)
@@ -21,4 +29,10 @@ class Bottles
       "no more bottles"
     end
   end
+
 end
+
+b = Bottles.new.verse(1)
+puts b
+c = Bottles.new.verse(89)
+puts c
