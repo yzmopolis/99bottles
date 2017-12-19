@@ -8,11 +8,11 @@ class Bottles
     result = ''
     if number_of_bottles.zero?
       result += "#{bottles(number_of_bottles).capitalize} of beer on the wall, #{bottles(number_of_bottles)} of beer.\n"
-      result += "Go to the store and buy some more, 99 bottles of beer on the wall."
+      result += "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
     else
       result += "#{bottles(number_of_bottles)} of beer on the wall, #{bottles(number_of_bottles)} of beer.\n"
       number_of_bottles -= 1
-      result += "Take #{number_of_bottles < 1 ? 'it' : 'one';} down and pass it around, #{bottles(number_of_bottles)} of beer on the wall.\n"
+      result += "Take #{number_of_bottles < 1 ? 'it' : 'one'; } down and pass it around, #{bottles(number_of_bottles)} of beer on the wall.\n"
     end
     result
   end
